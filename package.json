@@ -18,7 +18,9 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "git": "^0.1.5",
+    "modern-normalize": "^1.1.0",
+    "npm-git-install": "^0.3.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
