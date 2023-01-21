@@ -15,7 +15,7 @@ startButton.addEventListener('click', () => {
     documentBackground.style.backgroundColor = `${getRandomHexColor()}`;
   }, 1000);
 });
-
+//
 stopButton.addEventListener('click', () => {
   clearInterval(timer);
   startButton.removeAttribute('disabled', '');
