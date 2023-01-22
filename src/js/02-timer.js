@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
 
 let dateToday = new Date();
 let selectedDate = new Date();
@@ -26,8 +27,6 @@ const options = {
 };
 
 flatpickr('#datetime-picker', options);
-
-dataStart.setAttribute('disabled', '');
 
 const addLeadingZero = value => {
   return value.padStart(2, '0');
@@ -63,8 +62,8 @@ dataStart.addEventListener('click', () => {
       convertMs(timeDifference);
       dataStart.setAttribute('disabled', '');
     } else {
-      clearInterval();
-      alert('Time has ended!');
+      clearInterval(timer);
+      Notiflix.Notify.success('Time has ended!');
       dataStart.setAttribute('enabled', '');
     }
   }, 1000);
