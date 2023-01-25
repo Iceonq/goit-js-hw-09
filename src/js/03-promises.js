@@ -18,10 +18,10 @@ function createPromise(position, delay) {
 
 promiseButton.addEventListener('click', e => {
   e.preventDefault();
-  for (let i = 1; i <= amountInput.value; i++) {
-    let currentDelay = 0;
+  for (let i = 0; i <= amountInput.value; i++) {
     setTimeout(() => {
-      createPromise(i, currentDelay);
-    }, (currentDelay += i * stepInput.value));
+      createPromise(i + 1, delayInput.value + i * stepInput.value);
+    }, delayInput.value + i * stepInput.value);
   }
 });
+console.log('szto');
