@@ -24,4 +24,3 @@ promiseButton.addEventListener('click', e => {
     }, delayInput.value + i * stepInput.value);
   }
 });
-console.log('szto');
