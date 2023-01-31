@@ -18,7 +18,7 @@ function createPromise(position, delay) {
 
 promiseButton.addEventListener('click', e => {
   e.preventDefault();
-  for (let i = 0; i <= amountInput.value; i++) {
+  for (let i = 0; i < amountInput.value; i++) {
     setTimeout(() => {
       createPromise(
         i + 1,
